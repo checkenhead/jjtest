@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.amazonaws.services.s3.AmazonS3;
 import com.tjoeun.jj.dto.PostDto;
 import com.tjoeun.jj.entity.Bookmarks;
 import com.tjoeun.jj.entity.Feed;
@@ -20,7 +21,10 @@ import com.tjoeun.jj.entity.ReplyView;
 import com.tjoeun.jj.service.FeedService;
 import com.tjoeun.jj.service.MemberService;
 
+import lombok.RequiredArgsConstructor;
+
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/api/feeds")
 public class FeedController {
 
