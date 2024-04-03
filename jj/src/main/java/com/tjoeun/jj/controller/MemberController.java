@@ -207,7 +207,7 @@ public class MemberController {
 
 	private final AmazonS3 s3;
 	
-	@Value("#{cloud.aws.s3.bucket}")
+	@Value("${cloud.aws.s3.bucket}")
 	private String bucket;
 
 	@PostMapping("/fileupload")
